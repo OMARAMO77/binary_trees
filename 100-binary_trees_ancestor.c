@@ -15,7 +15,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 	binary_tree_t *visited_ancestors[100];
 
 	if (!first || !second)
-		return NULL;
+		return (NULL);
 
 	ancestor = (binary_tree_t *)first;
 	while (ancestor)
@@ -30,10 +30,10 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 		for (i = 0; i < visit_count; i++)
 		{
 			if (ancestor == visited_ancestors[i])
-				return ancestor;
+				return (ancestor);
 		}
 		ancestor = ancestor->parent;
 	}
 
-	return NULL;
+	return (NULL);
 }
