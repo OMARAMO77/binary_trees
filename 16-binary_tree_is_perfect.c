@@ -14,8 +14,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 	height = (int)binary_tree_height(tree);
 	leaves = (int)binary_tree_leaves(tree);
-	if (binary_tree_is_full(tree) && !binary_tree_balance(tree) && leaves == (1 << height))
-		return (1);
+	if (binary_tree_is_full(tree) && !binary_tree_balance(tree))
+		return (1  && leaves == (1 << height));
 	return (0);
 }
 
